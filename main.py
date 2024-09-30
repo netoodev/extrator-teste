@@ -181,38 +181,38 @@ class App:
 
         # Host
         ttk.Label(self.db_tab, text="Host:").grid(column=0, row=1, padx=10, pady=5, sticky='W')
-        self.db_host = tk.StringVar(value=os.getenv("MYSQL_HOST", "localhost"))
+        self.db_host = tk.StringVar(value=os.getenv("MYSQL_HOST", ""))
         self.host_entry = ttk.Entry(self.db_tab, textvariable=self.db_host, width=30)
         self.host_entry.grid(column=1, row=1, padx=10, pady=5)
 
         # Usuário
         ttk.Label(self.db_tab, text="Usuário:").grid(column=0, row=2, padx=10, pady=5, sticky='W')
-        self.db_user = tk.StringVar(value=os.getenv("MYSQL_USER", "root"))
+        self.db_user = tk.StringVar(value=os.getenv("MYSQL_USER", ""))
         self.user_entry = ttk.Entry(self.db_tab, textvariable=self.db_user, width=30)
         self.user_entry.grid(column=1, row=2, padx=10, pady=5)
 
         # Senha
         ttk.Label(self.db_tab, text="Senha:").grid(column=0, row=3, padx=10, pady=5, sticky='W')
-        self.db_password = tk.StringVar(value=os.getenv("MYSQL_PASSWORD", "password"))
+        self.db_password = tk.StringVar(value=os.getenv("MYSQL_PASSWORD", ""))
         self.password_entry = ttk.Entry(self.db_tab, textvariable=self.db_password, width=30, show='*')
         self.password_entry.grid(column=1, row=3, padx=10, pady=5)
 
         # Nome do Banco de Dados
         ttk.Label(self.db_tab, text="Nome do Banco de Dados:").grid(column=0, row=4, padx=10, pady=5, sticky='W')
-        self.db_name = tk.StringVar(value=os.getenv("MYSQL_DATABASE", "banco_farmacia"))
+        self.db_name = tk.StringVar(value=os.getenv("MYSQL_DATABASE", ""))
         self.dbname_entry = ttk.Entry(self.db_tab, textvariable=self.db_name, width=30)
         self.dbname_entry.grid(column=1, row=4, padx=10, pady=5)
 
     def create_supabase_tab(self):
         # URL do Supabase
         ttk.Label(self.supabase_tab, text="URL do Supabase:").grid(column=0, row=0, padx=10, pady=10, sticky='W')
-        self.supabase_url = tk.StringVar(value=os.getenv("SUPABASE_URL", "https://seu-projeto.supabase.co"))
+        self.supabase_url = tk.StringVar(value=os.getenv("SUPABASE_URL", ""))
         self.url_entry = ttk.Entry(self.supabase_tab, textvariable=self.supabase_url, width=50)
         self.url_entry.grid(column=1, row=0, padx=10, pady=10)
 
         # Chave do Supabase
         ttk.Label(self.supabase_tab, text="Chave do Supabase:").grid(column=0, row=1, padx=10, pady=10, sticky='W')
-        self.supabase_key = tk.StringVar(value=os.getenv("SUPABASE_KEY", "sua-chave"))
+        self.supabase_key = tk.StringVar(value=os.getenv("SUPABASE_KEY", ""))
         self.key_entry = ttk.Entry(self.supabase_tab, textvariable=self.supabase_key, width=50, show='*')
         self.key_entry.grid(column=1, row=1, padx=10, pady=10)
 
